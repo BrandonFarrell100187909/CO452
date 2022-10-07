@@ -16,8 +16,6 @@ public class program6
         //output the year born
         System.out.println("You were born on the year :"+year);
 
-        //message to the user if they are age 18 years or older
-        if (age > 18)
         {
             System.out.println("You are 18 years or older.");
         }
