@@ -3,7 +3,18 @@ public class program2
 {
 public enum grades
 {
-    NS , F, D, C, B, A;
+    NS , F , D , C , B , A;
+
+    private final int value;
+
+    private Grades(int value)
+    {
+        this.value = value;
+    }
+    public int getValue()
+    {
+        return value;
+    }
 }
 
 
