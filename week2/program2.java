@@ -1,7 +1,10 @@
 package week2;
+
+import java.util.Scanner;
 public class program2 
 {
-public enum grades
+
+    public enum grades
 {
     NS , F , D , C , B , A;
 
@@ -43,7 +46,7 @@ public enum grades
     public static void main(String[] args);
 
     {
-         
+        Scanner reader = new Scanner(System.in);  
     }
 }
 
