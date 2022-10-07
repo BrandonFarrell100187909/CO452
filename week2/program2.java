@@ -3,7 +3,7 @@ public class program2
 {
 public enum grades
 {
-    NS, F, D, C, B, A;
+    NS , F, D, C, B, A;
 }
 
 
