@@ -1,4 +1,4 @@
-
+package week2;
 public class program2 
 {
 public enum grades
