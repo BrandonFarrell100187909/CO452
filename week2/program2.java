@@ -18,7 +18,10 @@ public enum grades
 }
 
 
-{}
+{
+    public static void main(String[] args);
+}
+
     public final int GRADE_NS = 0;
     public final int GRADE_F = 39;
     public final int GRADE_D = 49;
