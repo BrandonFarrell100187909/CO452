@@ -65,17 +65,18 @@ public static void main(String[] args)
  myListofsongs.printAllSongs();
  
 
-//
 
  //deleting a song
  int id = InputReader.getInt("Enter the id of a song you would like to delete:");
  myListofsongs.deleteSong(id);
+ myListofsongs.printHeader();
+ myListofsongs.printAllSongs();
+
+
 
 //finding songs over select number of plays
  int numberOfplays = InputReader.getInt("Please enter a select number of plays:");
  myListofsongs.printSelectSongs(numberOfplays);
-
-//
 
 
 }
