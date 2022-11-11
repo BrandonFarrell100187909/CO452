@@ -14,7 +14,7 @@ public static void main(String[] args)
   */
   public static void createSongs()
   {
-     //This will create unique songs for the playlist.
+     //This will create unique songs for the listOfsongs.
      Song song1 = new Song("Heat Haze Shadow","Tekken 7 OST",100000);
      Song song2 = new Song("Great Cat's Village R","Melty Blood Type Lumina OST",5000);
      Song song3 = new Song("Chemical Love","Kevin&Cherry",10);
@@ -27,10 +27,10 @@ public static void main(String[] args)
      Song song10 = new Song("Scarlet Police on Ghetto Patrol in 24 Hours","IOSYS",9);
     
      //User input to get details of a song
-    String nameOfSong = InputReader.getString("Enter name of song: ");
-    String theArtist = InputReader.getString("Enter creator of song: ");
-    int plyCount = InputReader.getInt("How many times has the song been played: ");  
-    Song song11 = new Song(nameOfSong,theArtist,plyCount);
+    String nameOfSong = InputReader.getString("Enter the name of a song please: ");
+    String theArtist = InputReader.getString("Who is the creator of this song: ");
+    int songplayCount = InputReader.getInt("How many times has this song been played: ");  
+    Song song11 = new Song(nameOfSong,theArtist,songplayCount);
       
     song1.printSong();
     song2.printSong();
@@ -44,30 +44,39 @@ public static void main(String[] args)
     song10.printSong();
     song11.printSong();
  
-    //This will create a playlist and then add 2 songs to it.
- Playlist myPlaylist = new Playlist();
- myPlaylist.addSong(song1);
- myPlaylist.addSong(song2);
- myPlaylist.addSong(song3);
- myPlaylist.addSong(song4);
- myPlaylist.addSong(song5);
- myPlaylist.addSong(song6);
- myPlaylist.addSong(song7);
- myPlaylist.addSong(song8);
- myPlaylist.addSong(song9);
- myPlaylist.addSong(song10);
- myPlaylist.addSong(song11);
+    //This will create a listOfsongs and then add 2 songs to it.
+ listOfsongs myListofsongs = new listOfsongs();
+ myListofsongs.addSong(song1);
+ myListofsongs.addSong(song2);
+ myListofsongs.addSong(song3);
+ myListofsongs.addSong(song4);
+ myListofsongs.addSong(song5);
+ myListofsongs.addSong(song6);
+ myListofsongs.addSong(song7);
+ myListofsongs.addSong(song8);
+ myListofsongs.addSong(song9);
+ myListofsongs.addSong(song10);
+ myListofsongs.addSong(song11);
  
- //Display size of Playlist
- System.out.println(myPlaylist.sizeOfPlaylist());
+ //Display size of listOfsongs
+ System.out.println(myListofsongs.sizeOflistOfsongs());
 
- myPlaylist.printHeader();
- myPlaylist.printAllSongs();
+ myListofsongs.printHeader();
+ myListofsongs.printAllSongs();
  
- myPlaylist.deleteSong(1);
- myPlaylist.printAllSongs();
- System.out.println("=============================");
- myPlaylist.printSelectSongs(6);
+
+//
+
+ //deleting a song
+ int id = InputReader.getInt("Enter the id of a song you would like to delete:");
+ myListofsongs.deleteSong(id);
+
+//finding songs over select number of plays
+ int numberOfplays = InputReader.getInt("Please enter a select number of plays:");
+ myListofsongs.printSelectSongs(numberOfplays);
+
+//
+
 
 }
 }

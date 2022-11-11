@@ -1,60 +1,60 @@
 package CW1;
 import java.util.ArrayList;
-/*This class called playlist manages the playlist of the songs.
+/*This class called listOfsongs manages the listOfsongs of the songs.
 
 Author: Brandon Farrell
 Version: 1.0
 */
 
-public class Playlist 
+public class listOfsongs 
 {
-private ArrayList<Song>playlist;
+private ArrayList<Song>listOfsongs;
 
  /*
-  This will create a playlist of songs.
+  This will create a listOfsongs of songs.
   */
-  public Playlist()
+  public listOfsongs()
   {
-    playlist = new ArrayList<>();
+    listOfsongs = new ArrayList<>();
   }
  
   /**
-  This will get the size of the playlist.
+  This will get the size of the listOfsongs.
   */
-  public int sizeOfPlaylist()
+  public int sizeOflistOfsongs()
   {
-    return playlist.size();
+    return listOfsongs.size();
   }
 
-    /* This is how a song is added to the playlist
+    /* This is how a song is added to the listOfsongs
   */
   public void addSong(Song song)
   {
-    playlist.add(song);
+    listOfsongs.add(song);
   }
 
   /*
-  This will delete a song from the active playlist
+  This will delete a song from the active listOfsongs
   */
   public void deleteSong(int id)
   {
-    playlist.remove(id);
+    listOfsongs.remove(id);
   }
 
     /*
-  This will print every song in the playlist of songs 
+  This will print every song in the listOfsongs of songs 
   */
   public void printAllSongs()
   {
-    for (int index = 0; index < playlist.size(); index++)
+    for (int index = 0; index < listOfsongs.size(); index++)
     {
-        Song s = playlist.get(index);
+        Song s = listOfsongs.get(index);
         System.out.print("["+(index+1)+"]");
         s.printSong();
     }
   }
     /**
-  This will print a header for the playlist so it will look like a table of information.
+  This will print a header for the listOfsongs so it will look like a table of information.
   */
   
   public void printHeader()
@@ -68,9 +68,9 @@ private ArrayList<Song>playlist;
   */
   public void printSelectSongs(int timesplayedCount)
   {
-    for (int index = 0; index < playlist.size(); index++)
+    for (int index = 0; index < listOfsongs.size(); index++)
       {        
-        Song s = playlist.get(index);
+        Song s = listOfsongs.get(index);
         if (s.gettimesplayedCount() > timesplayedCount)
         {
             System.out.print("["+(index+1)+"]");
